@@ -1,0 +1,104 @@
+.btn-group-vertical {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	vertical-align: middle;
+	.btn {
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.btn:first-child {
+		border-top-left-radius: .25rem;
+		border-top-right-radius: .25rem;
+	}
+	.btn:last-child {
+		border-bottom-left-radius: .25rem;
+		border-bottom-right-radius: .25rem;
+	}
+	.btn:first-child,
+	.btn:not(:last-child):not(:first-child) {
+		border-bottom: none;
+	}
+}
+.btn-group {
+	width: 100%;
+	display: inline-flex;
+	&-lg .btn {
+		padding: 1rem 1.2rem;
+	}
+	&-sm .btn {
+		padding: .4rem .7rem;
+	}
+	.btn:first-child {
+		border-top-left-radius: .25rem;
+		border-bottom-left-radius: .25rem;
+	}
+	.btn:last-child {
+		border-top-right-radius: .25rem;
+		border-bottom-right-radius: .25rem;
+	}
+	.btn:first-child,
+	.btn:not(:last-child):not(:first-child) {
+		border-right: none;
+	}
+}
+.btn {
+	cursor: pointer;
+	color: $black-1;
+	display: inline-block;
+	padding: .75rem 1rem;
+	background: transparent;
+	border: 1px solid transparent;
+	transition: $transition-btn;
+	&-block { 
+		display: block; 
+		width: 100%;
+	}
+	&-link {
+		position: relative;
+		top: 1px;
+		color: #416bca;
+		font-size: .9rem;
+		padding: .55rem 1rem;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&-lg {
+		padding: 1rem 1.2rem;
+	}
+	&-sm {
+		padding: .4rem .7rem;
+	}
+	&-disabled {
+		pointer-events: none;
+		opacity: .5;
+	}
+	&-red { @include btnColor(/* Color-> */$red-1,/* bgColor-> */$red-6,$red-6,$white-1,$red-7,$red-6,$red-focus); }
+	&-orange-bold { @include btnColor($orange-1,$orange-bold-6,$orange-bold-6,$white-1,$orange-bold-7,$orange-bold-6,$orange-bold-focus); }
+	&-orange { @include btnColor($orange-1,$orange-6,$orange-6,$white-1,$orange-7,$orange-6,$orange-focus); }
+	&-yellow { @include btnColor($yellow-1,$yellow-6,$yellow-6,$white-1,$yellow-7,$yellow-6,$yellow-focus); }
+	&-green-bold { @include btnColor($green-1,$green-bold-6,$green-bold-6,$white-1,$green-bold-7,$green-bold-6,$green-bold-focus); }
+	&-green { @include btnColor($green-1,$green-6,$green-6,$white-1,$green-7,$green-6,$green-focus); }
+	&-blue-bold { @include btnColor($blue-1,$blue-bold-6,$blue-bold-6,$white-1,$blue-bold-7,$blue-bold-6,$blue-bold-focus); }
+	&-blue { @include btnColor($blue-1,$blue-6,$blue-6,$white-1,$blue-7,$blue-6,$blue-focus); }
+	&-purple { @include btnColor($purple-1,$purple-6,$purple-6,$white-1,$purple-7,$purple-6,$purple-focus); }
+	&-black { @include btnColor($white-1,$black-1,$black-1,$white-1,$black-2,$black-1,$black-focus); }
+	&-gray { @include btnColor($black-1,$gray-1,$gray-1,$black-1,$gray-2,$gray-1,$gray-focus); }
+	&-silver { @include btnColor($black-1,$silver-1,$silver-1,$black-1,$silver-2,$silver-1,$silver-focus); }
+
+	&-outline-red { @include btnColor($red-6,transparent,$red-6,$white-1,$red-6,$red-6,$red-focus); }
+	&-outline-orange-bold { @include btnColor($orange-6,transparent,$orange-bold-6,$white-1,$orange-bold-6,$orange-bold-6,$orange-bold-focus); }
+	&-outline-orange { @include btnColor($orange-6,transparent,$orange-6,$white-1,$orange-6,$orange-6,$orange-focus); }
+	&-outline-yellow { @include btnColor($yellow-6,transparent,$yellow-6,$white-1,$yellow-6,$yellow-6,$yellow-focus); }
+	&-outline-green-bold { @include btnColor($green-bold-6,transparent,$green-bold-6,$white-1,$green-bold-6,$green-bold-6,$green-bold-focus); }
+	&-outline-green { @include btnColor($green-6,transparent,$green-6,$white-1,$green-6,$green-6,$green-focus); }
+	&-outline-blue-bold { @include btnColor($blue-bold-6,transparent,$blue-bold-6,$white-1,$blue-bold-6,$blue-bold-6,$blue-bold-focus); }
+	&-outline-blue { @include btnColor($blue-6,transparent,$blue-6,$white-1,$blue-6,$blue-6,$blue-focus); }
+	&-outline-purple { @include btnColor($purple-6,transparent,$purple-6,$white-1,$purple-6,$purple-6,$purple-focus); }
+	&-outline-black { @include btnColor($black-1,transparent,$black-1,$white-1,$black-2,$black-1,$black-focus); }
+	&-outline-gray { @include btnColor($black-1,transparent,$gray-1,$black-2,$gray-2,$gray-1,$gray-focus); }
+	&-outline-silver { @include btnColor($black-1,transparent,$silver-1,$black-1,$silver-2,$silver-1,$silver-focus); }
+}
